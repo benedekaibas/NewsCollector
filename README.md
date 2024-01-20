@@ -5,12 +5,12 @@ This is a program that collects all the Hungarian news to my dad - yes, he is la
 
 These are all the websites that I am collecting data from.
 
-[Telex](www.google.com)  
-[Index](www.google.com)  
-[Origo](www.google.com)  
-[Magyar Jelen](www.google.com)  
-[Partizán](www.google.com)  
-[Portfólió](www.google.com)  
-[24.hu](www.google.com)  
-[444](www.google.com)  
-[HVG](www.google.com)  
+[Telex](https://telex.hu/)  
+[Index](https://index.hu/)  
+[Origo](https://www.origo.hu/)  
+[Magyar Jelen](https://magyarjelen.hu/)  
+[Partizán](https://www.partizanmedia.hu/)  
+[Portfólió](https://www.portfolio.hu/)  
+[24.hu](https://24.hu/)  
+[444](https://444.hu/)  
+[HVG](https://hvg.hu/)  
