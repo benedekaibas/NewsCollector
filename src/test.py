@@ -20,7 +20,7 @@ def main():
 
     #chechk how many articles there are on the website 
     numberOfArticles = cnn_news.size()
-    print(numberOfArticles)
+    print(f"Number of new articles: {numberOfArticles}")
 
     # I am not sure if it is the most efficient and fastest way of scraping the websites so I might change it 
     if freshDate == todaysDate:
