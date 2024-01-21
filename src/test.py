@@ -17,7 +17,7 @@ def main():
     index_news = newspaper.build('https://index.hu/', memoize_articles = False)
     telex_news = newspaper.build('https://telex.hu', memoize_articles = False)
     magyarJelen_news = newspaper.build('https://magyarjelen.hu/')
-    
+
     #chechk how many articles there are on the website 
     numberOfArticles = cnn_news.size()
     print(numberOfArticles)
@@ -35,10 +35,10 @@ def main():
             print(article.url)
             break
         for article in magyarJelen_news.articles:
-            print(article)
+            print(article.url)
             break
         for article in telex_news.articles:
-            print(article)
+            print(article.url)
             break
 if __name__ == "__main__":
     main()
