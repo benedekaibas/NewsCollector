@@ -6,9 +6,9 @@ from datetime import date
 def main():
     todaysDate = date.today()
     freshDate = date.today()
-    print(todaysDate)
+    print(f"You are reading {todaysDate}'s news")
 
-    telex_news = newspaper.build('https://cnn.com')
+    telex_news = newspaper.build('https://telex.hu')
     if freshDate == todaysDate:
         for article in telex_news.articles:
             firstArticle = telex_news.articles[0]
