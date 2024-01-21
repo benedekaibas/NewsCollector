@@ -8,7 +8,10 @@ def main():
     freshDate = date.today()
     print(f"You are reading {todaysDate}'s news")
 
-    telex_news = newspaper.build('https://telex.hu')
+#TODO:
+#todays date is only working with us news portals but with hungarian it is just not exceeding today's
+#date but it gives all the news before today's date 
+    telex_news = newspaper.build('https://foxnews.com')
     if freshDate == todaysDate:
         for article in telex_news.articles:
             firstArticle = telex_news.articles[0]
