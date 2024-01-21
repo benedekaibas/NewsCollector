@@ -11,13 +11,18 @@ def main():
 #TODO:
 #todays date is only working with us news portals but with hungarian it is just not exceeding today's
 #date but it gives all the news before today's date 
-    telex_news = newspaper.build('https://telex.hu')
-    numberOfArticles = telex_news.size()
+    cnn_news = newspaper.build('https://cnn.com')
+    fox_news = newspaper.build('https://www.foxnews.com/')
+    #chechk how many articles there are on the website 
+    numberOfArticles = cnn_news.size()
     print(numberOfArticles)
     if freshDate == todaysDate:
-        for article in telex_news.articles:
-            firstArticle = telex_news.articles[0]
+        for article in cnn_news.articles:
+            firstArticle = cnn_news.articles[0]
             print(firstArticle.url)
+            break
+        for article in fox_news.articles:
+            print(article.url)
             break
 if __name__ == "__main__":
     main()
