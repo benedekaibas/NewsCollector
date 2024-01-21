@@ -40,5 +40,14 @@ def main():
         for article in telex_news.articles:
             print(article.url)
             break
+
+#this is forting sorting all the categories that a website has 
+def testCase():
+    hvgNews = newspaper.build("https://hvg.hu/")
+
+    for category in hvgNews.category_urls():
+        print(category)
+
 if __name__ == "__main__":
     main()
+    testCase()
