@@ -9,7 +9,7 @@ from datetime import date
 
 #this is to test if the program is working with websites
 def main():
-    telex_news = newspaper.build('http://cnn.com', language = 'hu')
+    telex_news = newspaper.build('http://telex.hu', language = 'hu')
     count = 0
     todayDate = date.today()
     todayDate == True
