@@ -1,6 +1,6 @@
 import newspaper
 from newspaper import Article
-
+from datetime import date 
 #TODO: Add date library
 #TODO: Set the time to todays date
 #TODO: After setting today's day write a function that gets news only that day
@@ -9,8 +9,10 @@ from newspaper import Article
 
 #this is to test if the program is working with websites
 def main():
-    telex_news = newspaper.build('http://telex.hu', language = 'hu')
+    telex_news = newspaper.build('http://cnn.com', language = 'hu')
     count = 0
+    todayDate = date.today()
+    todayDate == True
     for article in telex_news.articles:
         if article in telex_news.articles:
             count += 1 
