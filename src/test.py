@@ -18,6 +18,6 @@ def main():
         for article in telex_news.articles:
             firstArticle = telex_news.articles[0]
             print(firstArticle.url)
-            
+            break
 if __name__ == "__main__":
     main()
