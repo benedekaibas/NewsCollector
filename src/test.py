@@ -8,7 +8,7 @@ def main():
         if article in telex_news.articles:
             count =+ 1 
             if count >= 1:
-                firstArticle = telex_news.articles[0]
+                firstArticle = telex_news.articles
                 print(firstArticle.url)
                 break
 
