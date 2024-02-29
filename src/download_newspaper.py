@@ -48,6 +48,9 @@ class NewsArticleBuilder:
         for url in split_urls:
             return url
     
+    def filter_todays_articles(self):
+        
+    
 
 
 
