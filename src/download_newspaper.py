@@ -4,25 +4,33 @@ import newspaper
 from newspaper import Article
 from datetime import date 
 
-def build():
-    telex = newspaper.build('http://telex.hu')
-    telex_url = telex.article_urls()
-    path = 'news_articles.txt'
-    return telex_url, path
+class NewsArticleBuilder:
+    def __init__(self, url, file_path):
+        self.url = url
+        self.file_path = file_path
 
-def open_url(telex_url, path): 
-    with open(path, "w") as fh:
-        convert_telex_url = str(telex_url)
-        write = fh.write(convert_telex_url)
-        return write
-    
-def format_txt_file(write):
-    write_to_str = str(write)
-    split_lines = write_to_str.splitlines(",")
-    return split_lines
+    def build(self):
+        telex = newspaper.build(self.url)
+        telex_url = telex.article_urls()
+        return telex_url
+
+    def open_url(self, telex_url):
+        with open(self.file_path, "w") as fh:
+            convert_telex_url = str(telex_url)
+            write = fh.write(convert_telex_url)
+            return write
+
+    def format_txt_file(self, write):
+        write_to_str = str(write)
+        split_lines = write_to_str.splitlines(",")
+        return split_lines
 
 if __name__ == "__main__":
-    telex_url, path = build()
-    write = open_url(telex_url, path)
-    open_url(telex_url, path)
-    format_txt_file(write)
+    url = 'http://telex.hu'
+    file_path = 'news_articles.txt'
+
+    news_builder = NewsArticleBuilder(url, file_path)
+
+    telex_url = news_builder.build()
+    write = news_builder.open_url(telex_url)
+    formatted_lines = news_builder.format_txt_file(write)
