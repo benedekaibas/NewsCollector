@@ -21,10 +21,10 @@ class NewsArticleBuilder:
             return write
 
     def format_txt_file(self, write):
-        write_to_str = str(write)
-        split_lines = write_to_str.splitlines(",")
-        return split_lines
-
+        formatted_txt_file = "\n".join(str(line) for line in write)
+        return formatted_lines
+    
+    
 if __name__ == "__main__":
     url = 'http://telex.hu'
     file_path = 'news_articles.txt'
