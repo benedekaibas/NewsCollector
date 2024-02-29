@@ -6,7 +6,8 @@ from datetime import date
 
 def build():
     telex = newspaper.build('http://telex.hu')
-    path = 'news_articles.txt'  
+    path = 'news_articles.txt'
+    
     with open(path, "w") as fh:
         convert_telex = str(telex)
         write = fh.write(convert_telex)
