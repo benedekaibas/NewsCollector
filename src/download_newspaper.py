@@ -22,9 +22,9 @@ class NewsArticleBuilder:
 
     def format_txt_file(self, write):
         formatted_txt_file = "\n".join(str(line) for line in write)
-        return formatted_lines
+        return formatted_txt_file
     
-    
+
 if __name__ == "__main__":
     url = 'http://telex.hu'
     file_path = 'news_articles.txt'
@@ -33,4 +33,4 @@ if __name__ == "__main__":
 
     telex_url = news_builder.build()
     write = news_builder.open_url(telex_url)
-    formatted_lines = news_builder.format_txt_file(write)
+    formatted_txt_file = news_builder.format_txt_file(write)
