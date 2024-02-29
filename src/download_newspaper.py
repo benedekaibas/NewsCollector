@@ -16,7 +16,13 @@ def open_url(telex_url, path):
         write = fh.write(convert_telex_url)
         return write
     
+def format_txt_file(write):
+    write_to_str = str(write)
+    split_lines = write_to_str.splitlines(",")
+    return split_lines
 
 if __name__ == "__main__":
     telex_url, path = build()
+    write = open_url(telex_url, path)
     open_url(telex_url, path)
+    format_txt_file(write)
