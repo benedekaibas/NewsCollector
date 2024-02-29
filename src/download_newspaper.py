@@ -47,6 +47,8 @@ class NewsArticleBuilder:
 
         for url in split_urls:
             return url
+    
+
 
 
 
