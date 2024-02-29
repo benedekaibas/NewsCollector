@@ -6,13 +6,17 @@ from datetime import date
 
 def build():
     telex = newspaper.build('http://telex.hu')
+    telex_url = telex.article_urls()
     path = 'news_articles.txt'
-    
+    return telex_url, path
+
+def open_url(telex_url, path): 
     with open(path, "w") as fh:
-        convert_telex = str(telex)
-        write = fh.write(convert_telex)
-    return write
+        convert_telex_url = str(telex_url)
+        write = fh.write(convert_telex_url)
+        return write
     
 
 if __name__ == "__main__":
-    build()
+    telex_url, path = build()
+    open_url(telex_url, path)
