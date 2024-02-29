@@ -5,16 +5,21 @@ from newspaper import Article
 from datetime import date 
 
 class NewsArticleBuilder:
+    """Class for getting data from websites and put them in a txt file in an organized order."""
+
     def __init__(self, url, file_path):
+        """Init function for the class to function well."""
         self.url = url
         self.file_path = file_path
 
     def build(self):
+        """Scrape a website and get the links of the articles."""
         telex = newspaper.build(self.url)
         telex_url = telex.article_urls()
         return telex_url
 
     def open_url(self, telex_url):
+        """The scraped urls we put in a txt file."""
         with open(self.file_path, "w") as fh:
             for url in telex_url:
                 fh.write(f"{url}\n")  
