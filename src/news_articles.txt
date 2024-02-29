@@ -1,0 +1,1 @@
+<newspaper.source.Source object at 0x000002A5C0014890>

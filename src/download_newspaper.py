@@ -5,12 +5,12 @@ from newspaper import Article
 from datetime import date 
 
 def build():
-    telex_build = newspaper.build('http://telex.hu')
-    
+    telex = newspaper.build('http://telex.hu')
+    path = 'news_articles.txt'  
     with open(path, "w") as fh:
-        path = 'news_articles.txt'
-        write = fh.write(path)
-        return write
+        convert_telex = str(telex)
+        write = fh.write(convert_telex)
+    return write
     
 
 if __name__ == "__main__":
