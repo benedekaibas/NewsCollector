@@ -2,7 +2,7 @@
 
 import newspaper
 from newspaper import Article
-from datetime import date 
+from datetime import datetime
 
 class NewsArticleBuilder:
     """Class for getting data from websites and put them in a txt file in an organized order."""
@@ -48,11 +48,6 @@ class NewsArticleBuilder:
         for url in split_urls:
             return url
     
-    def filter_todays_articles(self):
-        
-    
-
-
 
 
 if __name__ == "__main__":
