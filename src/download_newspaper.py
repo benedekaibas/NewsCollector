@@ -25,11 +25,13 @@ class NewsArticleBuilder:
                 fh.write(f"{url}\n")  
 
     def read_file(self):
+        """Reading the txt file."""
         with open(self.file_path, "r") as fh:
             lines = fh.readlines()
             return lines
 
     def split_lines_in_file(self):
+        """Splitting lines in the txt file."""
         lines = self.read_file()
         split_urls = []
         for line in lines:
@@ -38,6 +40,7 @@ class NewsArticleBuilder:
         return split_urls
 
     def process_urls(self):
+        """Returning the urls in order."""
         telex_url = self.build()
         self.open_url(telex_url)
         split_urls = self.split_lines_in_file()
