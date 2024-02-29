@@ -16,9 +16,9 @@ class NewsArticleBuilder:
 
     def open_url(self, telex_url):
         with open(self.file_path, "w") as fh:
-            convert_telex_url = str(telex_url)
-            write = fh.write(convert_telex_url)
-            return write
+            for url in telex_url:
+                fh.write(f"{url}\n")  
+
     def read_file(self):
         with open(self.file_path, "r") as fh:
             lines = fh.readlines()
@@ -26,16 +26,25 @@ class NewsArticleBuilder:
 
     def split_lines_in_file(self):
         lines = self.read_file()
+        split_urls = []
         for line in lines:
-            split = line.split(",")
-            return split
+            split = line.strip()
+            split_urls.append(split)
+        return split_urls
+
+    def process_urls(self):
+        telex_url = self.build()
+        self.open_url(telex_url)
+        split_urls = self.split_lines_in_file()
+
+        for url in split_urls:
+            return url
+
+
 
 if __name__ == "__main__":
     url = 'http://telex.hu'
     file_path = 'news_articles.txt'
 
     news_builder = NewsArticleBuilder(url, file_path)
-
-    telex_url = news_builder.build()
-    news_builder.open_url(telex_url)
-    news_builder.split_lines_in_file()
+    news_builder.process_urls()
