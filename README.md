@@ -15,7 +15,4 @@ These are all the websites that I am collecting data from.
 [444](https://444.hu/)  
 [HVG](https://hvg.hu/) 
 
-## How does the program work?
-
-This is the output you will get after running the program.  
-The program will list you links that are the newest articles on the websites.  
+Yet the code is only tested with one website. 
