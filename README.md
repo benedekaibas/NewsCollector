@@ -19,10 +19,3 @@ These are all the websites that I am collecting data from.
 
 This is the output you will get after running the program.  
 The program will list you links that are the newest articles on the websites.  
-
-Example:  
-You are reading 2024-01-21's news  
-Number of new articles: 4  
-http://cnn.com/2024/01/21/us/weather-this-week-winter-forecast/index.html  
-https://szevasztok.blog.hu/2019/09/18/mi_kell_ahhoz_hogy_a_cimlap_szerkesztoi_kiemeljek_a_posztodat_update  
-http://telex.hu/rovat/video  
